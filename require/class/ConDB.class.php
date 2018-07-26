@@ -1,9 +1,10 @@
 <?php
 
 	# -- Carrega class´s automaticamente --
-	function __autoload($class){
-		require_once"{$class}.class.php";
-	}
+		function __autoload($class){
+			require_once"{$class}.class.php";
+		}
+	# -- END Carrega class´s automaticamente --
 
 	# -- Conexao com o banco --
 		abstract class ConDB{
@@ -24,7 +25,7 @@
 	# -- END Conexao com o banco --
 
 	# -- Instancia um objeto --
-	$crud = new CRUD;
+		$crud = new CRUD;
 
 /*
 	# -- chama class crud e faz um insert --
@@ -38,7 +39,12 @@
 		}
 	# -- END Faz uma busca no banco --
 
+	# -- Alterando um registro --
+		$upd = $crud -> update('user','user=?,email=?,cidade=? WHERE idUser=?', array('Ricardo', 'rp@hotmail.com', 'carapicuiba', 1));
+	# -- END Alterando um registro --
 
-	var_dump($_SESSION['user']['email']);
+	# -- Deletando um registro --
+		$crud -> delete('user', 'WHERE idUser=?', array(2));
+	# -- END Deletando um registro --
 */
 ?>
