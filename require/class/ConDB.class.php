@@ -24,6 +24,8 @@
 		}
 	# -- END Conexao com o banco --
 
+#########################################################################
+
 	# -- Instancia um objeto --
 		$crud = new CRUD;
 
@@ -47,4 +49,9 @@
 		$crud -> delete('user', 'WHERE idUser=?', array(2));
 	# -- END Deletando um registro --
 */
+	# -- Instancia um objeto --
+	$vle = new ValidaEmail;
+
+	# --  --
+	var_dump($vle -> setValidaEmail('email_teste@hotmail.com.br'));
 ?>
