@@ -53,5 +53,5 @@
 	$vle = new ValidaEmail;
 
 	# --  --
-	var_dump($vle -> setValidaEmail('email_teste@hotmail.com.br'));
+	var_dump($vle -> setValidaEmail('adriana@hotmail.com.bre'));
 ?>

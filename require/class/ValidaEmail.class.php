@@ -5,16 +5,21 @@
 
 			public function setValidaEmail($email){
 
+				$ext = array('.com', '.br', '.net', '.gov', '.org', '.tv');
+			
 				# -- Verifica se esta vazio --
-					if(empty($email)){	
+					if(strlen($email) < 1){	
 						return 'Informe o e-mail';
 					}else{
 
 						# -- Valida primeira parte do e-mail segundo e ultima, "primeira@segunda.resto" --
-						if(!preg_match('/^[0-9a-z\_\.\-]+\@[0-9a-z\_\.\-]*[0-9a-z\_\-]+\.[a-z]{2,3}$/i', $email))
-							return 'E-mail invalido';
-						
-						return $email;
+						if(!preg_match('/^[0-9a-z\_\.\-]+\@[0-9a-z\_\.\-]*[0-9a-z\_\-]+\.[a-z]{2,3}$/i', $email)){
+							return 'E-mail invalido 1';
+						}else if(!in_array(strrchr($email, '.'), $ext)){
+							return 'E-mail invalido 2';
+						}else{
+							return $email;
+						}
 					}
 				# -- END Verifica se esta vazio --
 			}
