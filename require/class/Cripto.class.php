@@ -11,14 +11,10 @@
 			#$_cripto = hash('sha512', $param);	// 128 caracteres
 			#$_cripto = hash('whirlpool', $param);	// 128 caracteres
 
-			$_cripto = md5(hash('whirlpool', $param));
-
-			return $_cripto;
+			return md5(hash('whirlpool', $param));
 		}
 	}
 
-	# -- teste de criptografia MD5 --
-	$cpt = new Cripto;
-	var_dump ($cpt -> setCripto('a'));
+
 
 ?>

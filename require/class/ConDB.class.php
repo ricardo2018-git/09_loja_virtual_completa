@@ -54,9 +54,12 @@
 
 	# -- entra com um e-mail --
 	var_dump($vle -> setValidaEmail('adriana@hotmail.com.bre'));
-*/
+
 	# -- Instancia o objeto senha --
 	$vPass = new ValidaSenha;
 
 	var_dump($vPass -> setValidaSenha('aqwerri'));
+*/
+	$lgn = new Login;
+	var_dump($lgn -> setLogin('rp@hotmail.com', '12345678'));
 ?>
