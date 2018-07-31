@@ -9,13 +9,13 @@
 	# -- Conexao com o banco --
 		abstract class ConDB{
 
-			private static $cnx;
+			private $cnx;
 
 			private function setConn(){
 				return
-				is_null(self::$cnx) ?
-						self::$cnx = new PDO("mysql:host=localhost;dbname=desenvolvendophp", "root", "") :
-						self::$cnx;
+				is_null($this -> $cnx) ?
+						$this -> $cnx = new PDO("mysql:host=localhost;dbname=desenvolvendophp", "root", "") :
+						$this -> $cnx;
 			}
 
 			public function getConn(){
@@ -48,10 +48,15 @@
 	# -- Deletando um registro --
 		$crud -> delete('user', 'WHERE idUser=?', array(2));
 	# -- END Deletando um registro --
-*/
+
 	# -- Instancia um objeto --
 	$vle = new ValidaEmail;
 
-	# --  --
+	# -- entra com um e-mail --
 	var_dump($vle -> setValidaEmail('adriana@hotmail.com.bre'));
+*/
+	# -- Instancia o objeto senha --
+	$vPass = new ValidaSenha;
+
+	var_dump($vPass -> setValidaSenha('aqwerri'));
 ?>

@@ -11,9 +11,9 @@
 			}
 
 			# -- Insere dados no banco --
-				public function insert($table, $prep, $exec){
+				public function insert($table, $cond, $exec){
 
-					$this -> prepExec('INSERT INTO '.$table.' SET '.$prep.'', $exec);
+					$this -> prepExec('INSERT INTO '.$table.' SET '.$cond.'', $exec);
 
 					# -- Retorna o ultimo id gerado no banco --
 					return $this -> getConn() -> lastInsertId();
@@ -21,24 +21,24 @@
 			# -- END Insere dados no banco --
 
 			# -- Faz uma busca no banco --
-				public function select($fields, $table, $prep, $exec){
+				public function select($fields, $table, $cond, $exec){
 
-					$this -> prepExec('SELECT '.$fields.' FROM '.$table.' '.$prep.' ', $exec);
+					$this -> prepExec('SELECT '.$fields.' FROM '.$table.' '.$cond.' ', $exec);
 					return $this -> query;
 				}
 			# -- END Faz uma busca no banco --
 
 			# -- Altera um registro no banco --
-				public function update($table, $prep, $exec){
+				public function update($table, $cond, $exec){
 
-					$this -> prepExec('UPDATE '.$table.' SET '.$prep.'', $exec);
+					$this -> prepExec('UPDATE '.$table.' SET '.$cond.'', $exec);
 					return $this -> query;
 				}
 			# -- END Altera um registro no banco --
 
 			# -- Deletando um registro --
-				public function delete($table, $prep, $exec){
-					$this -> prepExec('DELETE FROM '.$table.' '.$prep.'', $exec);
+				public function delete($table, $cond, $exec){
+					$this -> prepExec('DELETE FROM '.$table.' '.$cond.'', $exec);
 				}
 			# -- END Deletando um registro --
 		}
