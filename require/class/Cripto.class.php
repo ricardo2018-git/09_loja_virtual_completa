@@ -11,7 +11,7 @@
 			#$_cripto = hash('sha512', $param);	// 128 caracteres
 			#$_cripto = hash('whirlpool', $param);	// 128 caracteres
 
-			return md5(hash('whirlpool', $param));
+			return md5($param);
 		}
 	}
 

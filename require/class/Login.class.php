@@ -14,13 +14,16 @@
 			$this -> email = $this -> vem -> setValidaEmail($email);
 			$this -> senha = $this -> vsh -> setValidaSenha($senha);
 
-			this -> log = $this -> senha == $senha ? 
-													$this -> crud -> select('*', 'usuario', 'where email=? && senha=?', array($this -> email, this -> cpt -> setCripto($this -> senha)))
+			$this -> log = $this -> senha == $senha ? 
+													$this -> crud -> select('idUsuario', 'usuario', 'where email=? && senha=?', array($this -> email, $this -> cpt -> setCripto($this -> senha)))
 													: FALSE;
 
 
-			if(){
-
+			if($this -> log && $this -> log -> rowCount() > 0){
+				foreach($this -> log as $this -> dds){
+					$_SESSION['logado'] = $this -> dds;		// -- Logou no sistema. --
+					header('location:../../admin');					// -- Manda para outra pagina. --
+				}
 			}else{
 				return 'Acesso negado.';
 			}
