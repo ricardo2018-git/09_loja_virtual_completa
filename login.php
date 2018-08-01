@@ -20,8 +20,8 @@
 				<main>
 					<form>
 						<p>Login no Desenvolvimento php</p>
-						<div>E-mail:<input type="text" id="eLogin" /></div>
-						<div>Senha:<input type="text" id="sLogin" /></div>
+						<div><label for="eLogin">E-mail:</label><input type="text" id="eLogin" /></div>
+						<div><label for="sLogin">Senha:</label><input type="text" id="sLogin" /></div>
 						<div><button>Entrar</button></div>
 						<span></span>
 					</form>

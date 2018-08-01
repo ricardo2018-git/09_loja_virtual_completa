@@ -1,0 +1,72 @@
+/*Todos elementos do html*/
+*{
+	margin: 0;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; 
+	font-size: 12px;
+}
+
+/*id*/
+#dvBase{
+	background: #fff;
+	width: 1007px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*formulario*/
+main form{
+	background: #fff;
+	border: 1px solid #ccc;	
+	-webkit-border-radius: 5px;	/*arredonda */
+	-moz-border-radius: 5px;	/*arredonda mozila*/
+	width: 642px;	/*largura*/
+	height: 266px;	/*altura*/
+	margin: 0 auto;	/*centro, esquerda direita*/
+}
+
+main form p{
+	background: none;	/*evita de deixar branco se colocar uma img em cima*/
+	margin: 4px 22px 30px;	/*margin interna*/
+	padding: 10px;	/*margin interna tmbm*/
+	border-bottom: 1px solid #ccc;	/*É o risco q tem*/
+	font-size: 18px;	/*Tamanho da letra*/
+}
+
+main form div{
+	background: none;
+	margin: 0 auto 15px;
+	text-align: center;	/*centraliza o texto & text*/
+	width: 270px;	/*largura*/
+ }
+
+ main form label{
+ 	background: none;
+ 	padding: 5px 10px;
+ 	color: #7d6666;	/*Cor da palavra*/
+ }
+
+ main form input[type='text']{
+ 	border: 1px solid #bdc7d8;
+ 	height: 20px;	/*altura do input*/
+ 	padding: 0 5px;	/*margin dentro do input antes de digitar*/
+ 	width: 200px;	/*tamanho comprimeto do input*/
+ }
+
+ main form button{
+ 	background: #5c74a9;	/*cor do botão*/
+ 	border: 1px solid #29447e;	/*borda espessura e cor*/
+ 	float: right;	/*faz ele ir para direita*/
+ 	cursor: pointer;	/*muda o ponteiro para um mão quando estiver em cima do botão*/
+ 	color: #fff;	/*cor da letra dentro do botão*/
+ 	padding: 5px 10px;	/*margem interna cima, baixo, dir e esq*/
+ 	font-weight: bolder;	/*engrossa letra do botão*/
+ }
+
+ main form button:hover{
+ 	opacity: 0.8;	/*deixa o botão um pouco transparente quando cursor passar em cima*/
+ }
+
+ main form span{
+ 	float: right;	/*alinha a direita*/
+ 	width: 152px;	/*margin da direita para esquerda*/
+ }
