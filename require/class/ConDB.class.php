@@ -56,7 +56,8 @@
 	$vPass = new ValidaSenha;
 
 	var_dump($vPass -> setValidaSenha('aqwerri'));
-*/
+
 	$lgn = new Login;
 	var_dump($lgn -> setLogin('rp@hotmail.com', '12345678'));
+*/
 ?>
