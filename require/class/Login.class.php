@@ -18,15 +18,25 @@
 													$this -> crud -> select('idUsuario', 'usuario', 'where email=? && senha=?', array($this -> email, $this -> cpt -> setCripto($this -> senha)))
 													: FALSE;
 
+			if($this -> email != $email){
 
-			if($this -> log && $this -> log -> rowCount() > 0){
-				foreach($this -> log as $this -> dds){
-					$_SESSION['logado'] = $this -> dds;		// -- Logou no sistema. --
-					header('location:../../admin');					// -- Manda para outra pagina. --
+					return $this -> email;
+
+			}else 
+				if($this -> senha != $senha){
+
+					return $this -> senha;
+
+				}else{
+
+					if($this -> log && $this -> log -> rowCount() > 0){
+						foreach($this -> log as $this -> dds){
+							$_SESSION['logado'] = $this -> dds;		// -- Logou no sistema. --
+						}
+					}else{
+						return 'Acesso negado.';
+					}
 				}
-			}else{
-				return 'Acesso negado.';
-			}
 		}
 	}
 

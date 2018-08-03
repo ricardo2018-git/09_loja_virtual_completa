@@ -10,7 +10,7 @@ function fctLogin(){
 		if(res){
 			$('main form span').html(res).css({color:'red'});
 		}else{
-			$('main form span').html('logado com sucesso!!!');
+			location.href='../../admin/';
 		}
 
 	});

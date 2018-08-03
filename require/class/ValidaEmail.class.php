@@ -14,9 +14,9 @@
 
 						# -- Valida primeira parte do e-mail segundo e ultima, "primeira@segunda.resto" --
 						if(!preg_match('/^[0-9a-z\_\.\-]+\@[0-9a-z\_\.\-]*[0-9a-z\_\-]+\.[a-z]{2,3}$/i', $email)){
-							return 'E-mail invalido 1';
+							return 'E-mail invalido';
 						}else if(!in_array(strrchr($email, '.'), $ext)){
-							return 'E-mail invalido 2';
+							return 'E-mail invalido';
 						}else{
 							return $email;
 						}

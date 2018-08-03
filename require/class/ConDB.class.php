@@ -9,10 +9,10 @@
 	# -- Conexao com o banco --
 		abstract class ConDB{
 
-			private $cnx;
+			private static $cnx;
 
 			private function setConn(){
-				return is_null($this -> $cnx) ? $this -> $cnx = new PDO("mysql:host=localhost;dbname=desenvolvendophp", "root", "") : $this -> $cnx;
+				return is_null(self::$cnx) ? self::$cnx = new PDO("mysql:host=localhost;dbname=desenvolvendophp", "root", "") : self::$cnx;
 			}
 
 			public function getConn(){
@@ -25,7 +25,6 @@
 /*
 	# -- Instancia um objeto --
 		$crud = new CRUD;
-
 
 	# -- chama class crud e faz um insert --
 		$crud -> insert('user', 'user=?, email=?, cidade=?', array('nomeDoUsuario', 'teste@hotmail.com', 'cidadeDeDeus'));
